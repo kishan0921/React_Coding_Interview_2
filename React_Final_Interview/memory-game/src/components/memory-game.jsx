@@ -94,23 +94,37 @@ const MemoryGame = () => {
   setWon(false);
 };
 
-  useEffect(() => {
-    initializeGame();
-  }, [gridSize]);
 
-  const checkMatch = (secondId) => {
-    const [firstId] = flipped;
-    if (cards[firstId].number === cards[secondId].number) {
-      setSolved([...solved, firstId, secondId]);
+
+// Jab bhi gridSize change hoga, naya game start ho jayega
+useEffect(() => {
+  initializeGame();
+}, [gridSize]);
+
+
+
+// Ye function check karta hai ki 2 flipped cards match karte hain ya nahi
+const checkMatch = (secondId) => {
+  // Pehla flipped card ka id nikaal rahe hain
+  const [firstId] = flipped;
+  // Dono cards ke number compare kar rahe hain
+  if (cards[firstId].number === cards[secondId].number) {
+    // Agar match ho gaya to dono ko solved list me daal do
+    setSolved([...solved, firstId, secondId]);
+    // Flipped reset (next turn ke liye)
+    setFlipped([]);
+    // User ko phir se click karne do
+    setDisabled(false);
+  } else {
+    // Agar match nahi hua to 1 second ruk ke cards band kar do
+    setTimeout(() => {
+      // Cards wapas flip (hide)
       setFlipped([]);
+      // User ko phir se click allow karo
       setDisabled(false);
-    } else {
-      setTimeout(() => {
-        setFlipped([]);
-        setDisabled(false);
-      }, 1000);
-    }
-  };
+    }, 1000);
+  }
+};
 
   const handleClick = (id) => {
     if (disabled || won) return;
