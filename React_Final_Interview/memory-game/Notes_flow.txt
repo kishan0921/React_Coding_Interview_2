@@ -1,0 +1,52 @@
+
+
+
+
+
+Step 03: 3:30 
+Create this file :
+memory-game/src/components/memory-game.jsx
+
+
+
+Step 02: 2:27
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+
+Go to inside tailwindcss.config file -
+Add this :
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+
+
+next Steps :
+index.css file paste these
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+Step 01:
+
+npm create vite@latest
+then yes
+
+project-name : memory-game
+
+then delete Assest folder
+
+remove all code from 
+App.csss
+index.csss
+
+and remove unnessary from App.jsx file also
+
+Finally:
+
+npm run dev
+
+Go to :  https://tailwindcss.com/docs/installation/using-vite
+npm install tailwindcss @tailwindcss/vite
+
+
