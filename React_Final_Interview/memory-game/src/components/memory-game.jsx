@@ -175,7 +175,6 @@ const handleClick = (id) => {
     }
   }
 };
-
       // Ye function check karta hai ki card flip hona chahiye ya nahi
       // Card flip hoga agar:
       // 1. User ne abhi usko click kiya hai (flipped array me hai)
@@ -183,33 +182,26 @@ const handleClick = (id) => {
       const isFlipped = (id) =>
         flipped.includes(id) || solved.includes(id);
 
-
       // Ye function check karta hai ki card already solve (match) ho chuka hai ya nahi
       // Agar id solved array me mil gaya → matlab wo card permanently open rahega
       const isSolved = (id) =>
         solved.includes(id);
 
-
       // Ye useEffect har baar chalega jab:
       // - solved array change hoga
       // - ya cards array change hoga
       useEffect(() => {
-
         // Yaha hum check kar rahe hain:
         // kya saare cards solve ho gaye hain?
-
         // solved.length === cards.length ka matlab:
         // jitne total cards hain utne hi solved ho gaye → game complete
-
         // cards.length > 0 isliye check kar rahe hain:
         // taki empty array pe galti se win na ho jaye
 
         if (solved.length === cards.length && cards.length > 0) {
-
           // Agar sab solve ho gaye → game jeet gaye 🎉
           setWon(true);
         }
-
       }, [solved, cards]); // dependency → jab bhi ye change honge, effect dubara chalega
 
   return (
@@ -220,7 +212,6 @@ const handleClick = (id) => {
     //2. Grid Size Box  ({/* Game Board */})
     //3.Winner or loss message  ( {/* Result */})
     //4.Reset Game Button ( {/* Reset / Play Again Btn */})
-
 
     // Step 03:
     <div className="flex flex-col items-center justify-center min-h-screen bg-grey-100 p-4">
