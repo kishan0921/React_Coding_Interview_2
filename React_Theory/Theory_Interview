@@ -1,0 +1,127 @@
+
+
+Video Link - https://www.youtube.com/watch?v=yfD_mS7XM0k
+
+
+
+All Questions List 
+
+Q1. What is React? What is the Role of React in software development? Q2. What are the Key Features of React?
+Q3. What is DOM? What is the difference between HTML and DOM? Q4. What is Virtual DOM? Difference between DOM and Virtual DOM? Q5. What are React Components? What are the main elements of it? Q6. What is SPA(Single Page Application)?
+Q7. What are the 5 Advantages of React?
+Q8. What are the Disadvantages of React?
+Q9. What is the role of JSX in React? (3 points)
+Q10. What is the difference between Declarative & Imperative syntax?
+
+
+Q1. What is Arrow Function Expression in JSX? V. IMP.
+Q2. How to Setup React first project?
+Q3. What are the Main Files in a React project?
+Q4. How React App Load and display the components in browser? V. IMP.
+Q5. What is the difference between React and Angular?
+Q6. What are other 5 JS frameworks other than React?
+Q7. Whether React is a Framework or a Library? What is the difference?
+Q8. How React provides Reusability and Composition?
+Q9. What are State, Stateless, Stateful and State Management terms? Q10. What are Props n JSX? V. IMP.
+
+
+Q1. What is NPM? What is the role of node_modules folder? V. IMP.
+Q2. What is the role of public folder in React?
+Q3. What is the role of src folder in React?
+Q4. What is the role of index.html page in React?
+V. IMP.
+Q5. What is the role of index.js file and ReactDOM in React? V. IMP. Q6. What is the role of App.js file in React?
+V. IMP.
+Q7. What is the role of function and return inside App.js?
+Q8. Can we have a function without a return inside App.js?
+Q9. What is the role of export default inside App.js?
+Q10. Does the file name and the component name must be same in React
+
+
+
+
+Q1. What is the role of JSX in React? (3 points)
+Q2. What are the 5 Advantages of JSX?
+Q3. What is Babel?
+Q4. What is the role of Fragment in JSX?
+Q5. What is Spread Operator in JSX?
+Q6. What are the types of Conditional Rendering in JSX? V. IMP.
+Q7. How do you iterate over a list in JSX? What is map() method?
+Q8. Can a browser read a JSX File?
+Q9. What is Transpiler? What is the difference between Compiler & Transpile
+Q10. Is it possible to use JSX without React?
+
+
+Q1. What are React Components? What are the main elements of it?
+V. IMP.
+Q2. What are the Types of React components? What are Functional Components? V. IMP. Q3. How do you pass data between functional components in React?
+Q4. What is Prop Drilling in React?
+V. IMP.
+Q5. Why to Avoid Prop Drilling? In how many ways can avoid Prop Drilling?
+V. IMP.
+V. IMP.
+Q6. What are Class Components In React?
+Q7. How to pass data between class components in React?
+Q8. What is the role of this keyword in class components?
+Q9. What are the 5 differences btw Functional components & Class components? V. IMP.
+
+
+Q1. What is Routing and Router in React?
+Q2. How to Implement Routing in React?
+Q3. What are the roles of <Routes> & <Route> component in React Routing?
+Q4. What are Route Parameters in React Routing?
+Q5. What is the role of Switch Component in React Routing?
+Q6. What is the role of exact prop in React Routing?
+
+
+
+Q1. What are React Hooks? What are the Top React Hooks?
+Q2. What are State, Stateless, Stateful and State Management terms? Q3. What is the role of useState() hook and how it works?
+Q4. What is the role of use Effect(). How it works and what is its use? 
+Q5. What is Dependency Array in useEffect() hook?
+Q6. What is the meaning of the empty array [] in the useEffect()?
+
+
+
+
+Q1. What is the role of useContext() hook?
+Q2. What is createContext() method? What are Provider & Consumer properties? Q3. When to use useContext() hook instead of props in real applications?
+Q4. What are the similarities between useState() and useReducer() hook?
+V. IMP.
+Q5. What is useReducer() hook? When to use useState() and when useReducer()? V. IMP.
+Q6. What are the differences between useState() and useReducer() Hook?
+Q7. What are dispatch & reducer function in useReducer Hook?
+Q8. What is the purpose of passing initial state as an object in UseReducer?
+
+
+
+Q1. What are Component life cycle phases?
+Q2. What are Component life cycle methods?
+Q3. What are Constructors in class components? When to use them?
+Q4. What is the role of super keyword in constructor?
+Q5. What is the role of render() method in component life cycle?
+Q6. How the State can be maintained in a class component?
+Q7. What is the role of componentDidMount() method in component life cycle?
+
+
+
+
+Q1. What are Controlled Components in React?
+V. IMP.
+Q2. What are the Differences btw Controlled & Uncontrolled Components? V. IMP. Q3. What are characteristics of controlled components?
+Q4. What are the advantages of using controlled components in React forms?
+Q5. How to handle forms in React?
+Q6. How can you handle multiple input fields in a controlled form?
+Q7. How do you handle form validation in a controlled component?
+Q8. In what scenarios might using uncontrolled components be advantageous?
+
+
+
+Q1. What is Code Splitting in React?
+Q2. How to Implement Code Splitting in React?
+Q3. What is the role of Lazy and Suspense methods in React? V. IMP.
+Q4. What are the Pros and Cons of Code Splitting?
+Q5. What is the role of the import() function in code splitting?
+Q6. What is the purpose of the fallback prop in Suspense?
+Q7. Can you dynamically load CSS files using code splitting in React?
+Q8. How do you inspect and analyze the generated chunks in a React application?
