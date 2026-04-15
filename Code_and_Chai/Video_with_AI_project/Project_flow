@@ -1,0 +1,23 @@
+
+
+
+
+
+
+21:00 - 
+npm i mongoose bcryptjs
+npm i @types/bcryptjs
+
+==================================
+npx create-next-app@latest
+
+Would you like to use TypeScript ? - No / Yes = Yes
+Would you like to use ESLint ? No /Yes = yes
+Would you like to use Tailwind Css ? = No/Yes = yes 
+would you like your code inside a 'src'/ directory ?  No/Yes = No
+Would you like to use App Router ? (recommended)  => Yes
+Turbopack => yes
+Customize the import alias ? => No
+
+============================================
+18:20 - Project description and planning 

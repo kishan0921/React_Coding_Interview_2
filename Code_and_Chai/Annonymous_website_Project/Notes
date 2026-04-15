@@ -1,0 +1,230 @@
+//Note: Next js , mostly edge time framework hai.
+//means, ye next js application all time nahi chalti hai, jaise jaise request aata hai
+// waise waiase request execute hota h, and application run krti hai.
+
+Just Remember : Jaise jaise function , schema and all ka request aata hai 
+// waise waise applciaiton run krti hai.. in NEXTJS
+Summary: 
+=========
+Install Library :
+
+npm i mongoose 
+npm i zod
+npm install resend
+npm i bcryptjs
+npm i next-auth
+
+IMPORTANT :: 
+this is the main page of application
+annonymous/src/app/(app)/page.tsx
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Extra - Assingemnt - 8:25:00 
+
+8:20:00 - Fully End :)
+
+8:10:00
+import Autoplay from 'embla-carousel-autoplay';
+install - https://www.embla-carousel.com/get-started/react/
+
+npm i embla-carousel-autoplay
+then run 
+npm install embla-carousel-react --save
+
+==================================================
+note: Don't install this.please
+npm install embla-carousel-react --save
+then facing error so, uninstall it becoz we want specific autoplay waala npm
+npm uninstall embla-carousel-react --save
+
+
+
+8:05:00
+https://ui.shadcn.com/docs/components/carousel
+npx shadcn@latest add carousel
+
+this is the main page of application
+annonymous/src/app/(app)/page.tsx
+
+
+
+Step 09: 
+
+7:25:00  - watch and setValue
+https://react-hook-form.com/docs/useform/watch
+https://react-hook-form.com/docs/useform/setvalue
+
+7:17:00 
+https://www.mongodb.com/docs/manual/reference/operator/update/pull/
+
+
+7:000 
+
+Alert Dialog 
+https://v3.shadcn.com/docs/components/alert-dialog
+npx shadcn@latest add alert-dialog
+
+
+
+npx shadcn@latest add card
+https://v3.shadcn.com/docs/components/card
+
+
+Step 08 :
+
+npm install usehooks-ts axios && npm install -D @types/axios && npx shadcn-ui@latest add toast
+
+npm install usehooks-ts
+npx shadcn-ui@latest add toast
+
+
+
+
+6:07:00 
+install missing 
+npx shadcn@latest add input
+npx shadcn@latest add toast
+
+
+5:40:00 
+Input package install
+npx shadcn-ui@latest add input
+
+Topic: useEffect
+// Note: jab bhi mera page reload hoga, useeffect call hoga and 2nd jab mera username ki value change hogi. 
+  // lakin username ki value nahi , debounce username ki value change hogi jab 2nd time mera useeffect run hoga.
+  // Syntax - 
+  // useEffect (() => {}, [] ) 
+  // () => {}, - ek mera lgta hai callback 
+  // [] - aur ek laagta hai mera dependency array.
+
+
+https://react-hook-form.com/get-started
+
+(Toast)
+https://v3.shadcn.com/docs/components/toast
+
+npx shadcn-ui@latest add toast
+
+
+
+(all hooks)
+https://usehooks-ts.com/introduction
+npm install usehooks-ts
+
+
+
+[5:01:00] - axios install (for sending request)
+
+Lucide react :For iconic(and shadcn is providing this)
+https://lucide.dev/guide/packages/lucide-react
+
+Step 07: Ai intregation  
+
+
+[4:54:11] form installing
+https://ui.shadcn.com/docs/components/form
+npx shadcn@latest add form
+  - src/components/ui/form.tsx
+
+
+ Created 3 files:
+ note: these file is create with UI code.
+  - src/components/ui/button.tsx
+  - src/components/ui/label.tsx
+
+
+https://ui.shadcn.com/docs/installation/next
+npx shadcn@latest init
+
+which style would you like to use? default
+which color would you like to use as base color ? Slate
+would you like to use CSS variables for colors 
+
+
+[4:33:00]
+
+https://ai-sdk.dev/docs/getting-started/nextjs-app-router
+
+npm install ai @ai-sdk/react @ai-sdk/openai zod
+
+Note: Directly Copy-paste the code from (https://ai-sdk.dev/docs/getting-started/nextjs-app-router)
+(then Wire up UI) - 90 % copypaste code
+annonymous/src/app/api/suggest-messages/route.ts
+
+
+=============================================
+Step 06: 
+
+4:32:00 Till Done 
+
+3:34:00 - Summary (check username unique)
+annonymous/src/app/check-username-unique/route.ts
+
+
+3:06:00 -3:11:00 - Summary (revision)
+
+
+Step 05 
+
+Adding Middle ware
+2:49:00 - https://nextjs.org/docs/14/app/building-your-application/routing/middleware
+
+2:41:00 - https://next-auth.js.org/getting-started/typescript#adapters
+
+2:28:00- Starting
+
+
+----------------------
+2:04:00 
+NextAuth.js (credentials Method)
+
+https://next-auth.js.org/providers/credentials
+
+========================================================
+Step 04:
+
+1:10:00 Video - chota sa algorithm likha hua h.
+
+npm install resend
+npm i bcryptjs
+npm i next-auth
+
+https://authjs.dev/getting-started/installation?framework=Next.js
+
+======================================
+Step 03:
+
+https://ui.shadcn.com/docs/installation/next
+
+npm i zod
+
+================================
+Step : 02
+models:
+  -user.TypeScript
+
+npm i mongoose
+
+======================================
+npm init 
+then 
+npm run dev 
+
+
+========================================
+Step 01:
+
+npx create-next-app@latest
+
+name : mstrymessage 
+TypeScript : Yes 
+Eslint :Yes
+Tailwind Css :Yes
+Src : Yes 
+App Router : Yes
+Turbo pack : No
+Customerize the default : No 
+
+
