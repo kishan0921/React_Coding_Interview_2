@@ -1,32 +1,32 @@
-// Note: Login and sigup .jsx dono react form hook 
+// Skipping this detail comments - becausse (95% same code/concept as Login.jsx)
+
+// Note: Login.jsx and sigup .jsx dono react form hook 
 // pe based hai and same code likha gaya hai dono me ...
 // // 1 samjh lo 2nd file easily smjh jaaoge
 
 
+// STEP 01:
 // state to change krna hoga , so useState le lete hai
 import React, {useState} from 'react'
-
 // authService bhi lagegi hi , to import krenge
 import authService from '../appwrite/auth'
-
 // login ke baad kahi to bhejoge user ko , 
 // Clickable ke liye Link, and Dusri jagah bhejne ke liye useNavigate import krenge kr liye
 import {Link ,useNavigate} from 'react-router-dom'
-
 // ab login import kr rahe hai and , yaaha hm usse as authLogin use krengege.
 import {login} from '../store/authSlice'
 // Button, input, Logo sab index se import kr liye h
 import {Button, Input, Logo} from './index.js'
-
 // Dispatch bhi krna hoga , to useDispatch import krenge react-redux se
 import {useDispatch} from 'react-redux'
-
 // and form ke liye react-hook-form import krenge
 import {useForm} from 'react-hook-form'
 
 
+
 // signup ka component banayenge
 function Signup() {
+    // STEP : 02 
     // sabse pehle navigate to lenge hi
     const navigate = useNavigate()
     // error display krwane ke liye useState ka use krenge 
@@ -38,6 +38,8 @@ function Signup() {
     // useForm se hum, register and handleSubmit le rahe hai.
     const {register, handleSubmit} = useForm()
 
+
+    // STEP 03:
     // Ab sabse pehle to 1 method banayenge create ka
     // then async function banayenge , kyuki data submit hoga then aayega , and bahut kuch
     // and data ko send krenge
@@ -67,7 +69,7 @@ function Signup() {
                 // ab mtlb user login hai, then yaha kyu rakhna hai isse,
                 // login ho gaya h user, then (/) yaha pe naviagte kr do user ko    
                 navigate("/")
-            }
+            }  // STEP : 04
         } catch (error) {
             // agar error aaya to error message show kr denge.
             // ye jo error.message hai ye mai state me save kr liya hu.
@@ -76,6 +78,7 @@ function Signup() {
     }
 
   return (
+    // STEP 05:
     <div className="flex items-center justify-center">
             <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
             <div className="mb-2 flex justify-center">
@@ -94,11 +97,13 @@ function Signup() {
                     </Link>
                 </p>
                 
-        // agar error aayega tabhi && ke baad jo likha hai , show krenge nahi to nahi.
+                {/* // STEP : 06 */}
+        {/* // agar error aayega tabhi && ke baad jo likha hai , show krenge nahi to nahi. */}
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
 
-                    {/* // Ab interesting Story start hoti hai yaha se, form ki  */}
+         {/* STEP : 07  */}
+        {/* // Ab interesting Story start hoti hai yaha se, form ki  */}
         {/* // form ke ander 1 major activity hoti hai, onSubmit
         // and form jab bhi submit hoga then , always handleSubmit() use hoga, and ye ek method hai 
         // and isske ander hum apna method send krte hai, ki iss tarah se hum submit handle krengege. 
@@ -123,6 +128,7 @@ function Signup() {
                             required: true,
                         })}
                         />
+                        {/* STEP : 08 */}
                         <Input
                         label="Email: "
                         placeholder="Enter your email"
@@ -135,6 +141,7 @@ function Signup() {
                             }
                         })}
                         />
+                        {/* STEP : 09  */}
                         <Input
                         label="Password: "
                         type="password"
@@ -148,7 +155,6 @@ function Signup() {
                     </div>
                 </form>
             </div>
-
     </div>
   )
 }
