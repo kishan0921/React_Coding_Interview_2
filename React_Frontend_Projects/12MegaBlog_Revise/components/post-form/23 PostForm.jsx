@@ -120,28 +120,41 @@ export default function PostForm({ post }) {
         // STEP : 10
          // 2nd case , koi post nahi hai to create kar do.
         else {
+
+            // else me humne mtlb krna hai, ki "ek user jo hai wo ek new form create krna chahta hai"
+            // New form create krna chahta hai to wo file upload kiya hi hoga.
+
             // ab file ko handle krenge
             // data se aap image [0] 1st index waala le lenge.
-            // appwrite ki service use krke file ko upload kr do
-            //    
+            // appwrite ki service use krke file ko upload kr do  
             const file = await appwriteService.uploadFile(data.image[0]);
 
             
-            // agar file hai to
+            // STEP : 11
+            // agar file hai to , mtlb "new user ne" file uplaod kr di
             if (file) {
                 // sabse pehle file ki id le lete hai.
+                // Note: mongoDB me _id aise use krte h, yaaha $id use krte hai.
                 const fileId = file.$id;
 
                 // ab humara pass data hai, and usske ander featuredImage h to usko file id se overwrite/update kro
                 data.featuredImage = fileId;
                 
                 // ab uppar 1 property update kiye , and baaki baachi hui property create kr do
-                const dbPost = await appwriteService.createPost({ ...data, 
+                // ek db post variable me store kr lete hai.
+                const dbPost = await appwriteService.createPost({ // hum directly ek post ni create krnege,
+                    // sabse pehle jo data hai mere pass old waala.
+                    // Ussko laao using (...)spread operator
+                    // ab old saara data aa gaya, now ab bas
+                    //jo User ne new file upload ki hai.
+                    //usska Id create hua hoga ussko bas Update kr do data me.
+                    ...data, 
                     // user data se userid le lenge
                     // and userData jo hai, wo hum store se laa rahe h
                     userId: userData.$id });
 
 
+            // STEP : 12
             // ab agar dbPost hua to user ko navigate kr do
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`);
@@ -151,12 +164,17 @@ export default function PostForm({ post }) {
     };
 
 
+    // STEP : 13
+    // Ab jo hum new method bana rahe hai, wo mera hai slugTransform.
+     
     // ab new concepts dekhte hai, jo ki help krega interview clear krwane me.
     // ab ye slug transform ky krta hai ?
     // 2 inputs fields hai,ek title and slug h, 
     // title ko watch krna hai and slug ke ander value generate krni h
-    // agar user kahi pe ( ) space deta hai to mujhe ussko replace krna h - (dash me)
+    // agar user kahi pe ( ) space deta hai to hume ussko replace krna h - (dash me) - ye to mera regex se ho jaayega.
     
+
+    // STEP : 14
     // sabse pehle useCallback le lete hai and usske ander value pass kr rahe h
     const slugTransform = useCallback((value) => {
 
@@ -164,6 +182,7 @@ export default function PostForm({ post }) {
         if (value && typeof value === "string")
             // then return kr denge value ko
             return value
+            // then some validation laga do and regex ka use kr lo.
             // saari value ko trim kr do
                 .trim()
                 // and lower case kr do
@@ -179,8 +198,10 @@ export default function PostForm({ post }) {
     // useCallback ke ander 2nd argument me dependency hoti hai, but abhi need nhi h to empty
     []);
 
-    // Interview Ques : uppr jo slugTransform banaye h, ussko use kaise krna h ?
 
+    // STEP : 15 - 7:16:00 
+    // Interview Ques : uppr jo slugTransform banaye h, ussko use kaise krna h ?
+    // ye question thoda senior level interview ke liye hi h.
 
     // react me se hum useEffect use kr lete hai
     React.useEffect(() => {
@@ -190,12 +211,17 @@ export default function PostForm({ post }) {
         const subscription = watch(
             // ab watch ke ander bhi ek callback milta hai.
             // ab ander mujhe value milti hai, and name milti hai
+            //STEP : 17
             (value, { name }) => {
             // humare pass jo name hai, wo tittle hai.
                 if (name === "title") {
             // ab jaha pe title hai wooha ek setvalue() method use krenge
+            // then setvalue, like setvalue kaha use krni hai ?
+            // slug pe and replace krni hai hume value
+            // slugTransform(value.title) -- isski value 
+            // iss "slug" pe 
                 setValue("slug", slugTransform(value.title), 
-                // validate krna hai ya nahi ? to hum kr rahe hai 
+                // lastly, validate krna hai ya nahi ? to hum kr rahe hai 
                 { shouldValidate: true });
             }
         });
@@ -203,16 +229,20 @@ export default function PostForm({ post }) {
         // return ke ander ek callback milta hai,ussko call krke subscription ko unsubscribe kr rahe h 
         return () => subscription.unsubscribe();
     }, 
-    // ab dependecy array me hai watch, sllugTransform, setValue , ye sab me kuch bhi change aayega then hum useefect ko run krna h
+    // STEP : 16
+    // ab dependecy array me hai kya kya hai - ek to mera hai watch, sllugTransform, setValue , ye sab me kuch bhi change aayega then hum useefect ko run krna h
+    // watch hum input jo hai usspe hum laaga denge.
     [watch, slugTransform, setValue]);
 
 
-
+    // STEP 17
+    // Now, ab hum return ke ander form use krenge. and form humne kaafi baar use kr liya hai,So time-waste ni krenge
+    // and direct code-copy-paste krenge.
+    // Note: copy-paste code directly in Video also - Skip
     return (
         // form mera 2 part me divided hai 
         // first part me 2/3 wala part hoga
         // second part me 1/3 wala part hoga
-
 
         // first part me 2/3 wala part hoga
         <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
@@ -221,14 +251,22 @@ export default function PostForm({ post }) {
                     label="Title :"
                     placeholder="Title"
                     className="mb-4"
+                    // STEP 18
+                    // yaha ...register liya hu and title use kiya hu and ye title required hai iss input ke liye.
                     {...register("title", { required: true })}
                 />
                 <Input
                     label="Slug :"
                     placeholder="Slug"
                     className="mb-4"
+                    // STEP:19
+                    // yaha name slug hi dena, kyuki issi ke basis pe hum kaam kr rahe h.
                     {...register("slug", { required: true })}
+                    // isska input kaisee aayega?
+                    // humne ek e - event call krega.
                     onInput={(e) => {
+                        // then event ke ander humne ek setvalue call kiya hai.
+                        // adn baaki aur then, automatically value fill hoti jaayegi.
                         setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
                     }}
                 />
