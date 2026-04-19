@@ -1,5 +1,12 @@
+// STEP : 01
 //Note: Video me Code directly Paste kiya gya hai.
+// full file code passte directly
+// new concept : issme author ka hai
+// Agar post ka author hai so, hum ussko delete and edit ka option denge
+// warna ni denge...yahi new concept h iss file me 
 
+//Author Check Condition:
+    // const isAuthor = post && userData ? post.userId === userData.$id : false;
 
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -10,6 +17,8 @@ import { useSelector } from "react-redux";
 
 export default function Post() {
 
+    // STEP :02
+    //Humne post liya hai.
     // post ka state bana lete hai, and empty array ya null bhi le skte h
     const [post, setPost] = useState(null);
     // slug useParams se le rahe h
@@ -20,6 +29,7 @@ export default function Post() {
     // ab mujhe userData chahiyhe, and ye mujhe state se milega wohaa hi rakhaa hua hai
     const userData = useSelector((state) => state.auth.userData);
 
+    // STEP : 03
     //  !important 
     // humne author check kr liya h
     // yaha hum check kr rahe hai, post se jo userId mila h, and userData se jo userId mila h wo false h to author h nahi to nahi

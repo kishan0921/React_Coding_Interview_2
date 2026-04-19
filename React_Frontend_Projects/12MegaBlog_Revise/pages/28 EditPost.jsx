@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react'
 
+// STEP : 01
+import React, {useEffect, useState} from 'react'
 // container and postcard component le lete hai from components
 import {Container, PostForm} from '../components'
 // then appwrite kis service bhi chahiye hogi
@@ -8,18 +9,23 @@ import appwriteService from "../appwrite/config";
 import { useNavigate,  useParams } from 'react-router-dom';
 
 function EditPost() {
+    // STEP : 02
+    //sabse pehle posts chahiye honge.
     // post ka state bana lete hai, and empty array ya null bhi le skte h 
     const [post, setPosts] = useState(null)
 
-    // kyuki edit krne hai post , so user edit pe click krega and then edit post pe jaayega to url (slug) chahiye
-    // slug useParams se le rahe h
+    // then ek aapko slug laagega(id).
+    // kyuki edit krne hai post , so user edit pe click krega and then edit post pe jaayega to url chahiye and url me slug(id) hoga.
+    // slug useParams se mil jaayega.
     const {slug} = useParams()
     // user ko navigate krwana hai, so useNavigate se le rahe h
     const navigate = useNavigate()
 
-    // slug me kuch bhi change ho to, saari value le kar aani hogi
+    // STEP : 03
+    // slug me kuch bhi change ho to, saari data value le kar aani hogi
     useEffect(() => {
 
+        // STEP : 05
         if (slug) {
             // agar slug hai to , appwrite ki service call kr lenge. getpost and usske ander slug de denge
             appwriteService.getPost(slug)
@@ -36,9 +42,11 @@ function EditPost() {
             navigate('/')
         }
     }, 
-    // ek to slug(url) and navigate me kuch bhi change hota hai to ye useEffect call hoga.
+    // STEP : 04
+    // ek to slug(url ki Id me) and navigate me kuch bhi change hota hai to ye useEffect call hoga.
     [slug, navigate])
 
+    // STEP : 06
     // agar post hai to post ? () kuch return kro  : nahi to null return kro
   return post ? (
     // post hai to 

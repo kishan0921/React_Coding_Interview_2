@@ -22,6 +22,8 @@ import Post from "./pages/Post";
 
 import AllPosts from "./pages/AllPosts";
 
+
+// STEP 04: 7:45:00 - video end last time
 // ab mujhe chahiye router , to create kr lete h Browser router
 // createBrowserRouter ke ander hum ek empty arra
 const router = createBrowserRouter([
@@ -120,6 +122,7 @@ const router = createBrowserRouter([
 //   </StrictMode>,
 // )
 
+// STEP : 03.1
 // New Method - 02
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
