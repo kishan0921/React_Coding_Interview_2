@@ -1,0 +1,48 @@
+
+
+
+// Jab bhi hum file upload krte hai to 
+// 2 package to lgta hi hai. express-fileupload and multer
+// dono almost same hi hai, but humlog yaha multer use karenge
+// kyuki company me bhi usee kiya jaata hai.
+
+Note: multer ke thorugh hum user se file upload krwayenge,
+// direct cloudinary se file upload nahi hota.
+// cloudinary to bs ek service hai, like aws
+
+// strategy: hum using multer, user se file upload krwaayenge and temporary
+// local storage pe file rakh denge.
+// then using cloudinary hum local storage file lenge and server pe store kr denge.
+// now, go to util/cloudinary.js file 
+npm install multer
+
+npm install cloudinary
+==================================
+
+npm i jsonwebtoken
+https://www.jwt.io/
+
+Now, Bcrypt.js and Bcrypt -
+npm i bcrypt  [it hash your password, decrypt and compare your password]
+
+====================================
+npm i mongoose-aggregate-paginate-v2
+
+
+npm i cookie-parser cors
+
+
+Install these 3 package:
+
+npm i mongoose express dotenv
+
+==============================
+
+Prettier - ignore file
+Prettier - Install
+
+
+// Jab bhi koi code change hoga, nodemon automatically server ko restart karega
+npm i nodemon
+
+npm i -y

@@ -1,0 +1,33 @@
+
+// // Previously Db / index.js me 
+
+// import { now } from "mongoose"
+
+
+// Jab bhi hum database se connect karenge, to 2 to humesha rahega,
+
+// 1- async await, because, (Db connect krne me time to lgta hai ) and  (db dusre continent me hai), 
+// 2- try catch , kyuki problem to aayega hi connect krne time
+
+
+// now, 
+// Note:  2 option hai, kuch me hum 
+// 1. try catch use krte hai
+// 2. promises
+
+// now, Database se to hum bahut baat krne waale hai, 
+// - User ke controller me karenge,
+// - Video ke Controller me karenge , aur bhi bahut
+
+// to Kyu na hum , 
+
+
+// WHy We create Utils ? 
+// - To kyu na hum ek Util file bana le, and wrapper ka 1 generalise function 
+// bana lu,
+// - and Jab aapko iss type ka function execute krna hoga,
+// to mere method me pass kr dena and mai execute krke aapko wapas de dunga
+
+Now, Go to asyncHandler.js
+// Option 01: Try-Catch waala tricks se
+/

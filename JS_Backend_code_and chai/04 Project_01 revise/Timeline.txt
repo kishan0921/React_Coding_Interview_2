@@ -1,0 +1,155 @@
+stackBlitz
+Eraser.io
+
+
+
+
+
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Javascript backend - Part 1:
+
+Phase II :
+
+3:58:00 - 4:06:00 - Project Overview (Youtube+twitter type)
+4:09:00- Project 01 - start
+4:16:00 - actual start project 01
+4:30:00 - Nodemon   [dev dependeices]
+4:37:00 - File created (controller,db, middlewares,models, routes, utils)
+4:40:00 - Prettier install  [as dev dependencies installed]
+4:41:00 - Prettier config
+4:44:00 - prettier ignore file
+4:48:00 - Database connection [Mongo DB]
+4:50:00 - 4:58:00 - Atlas  and db connection
+
+xxxxxxxxxxxxxxxx*******Project 01 *******xxxxxxxxxxxxxxxx
+(Actual Code Started - Project 01 Mega Youtube) - Project 01 
+5:01:00 - Mongoose,express, dotenv installing
+5:04:00 - 5:11:00 - Db connection (1st approach)
+5:11:00 - 5:28:00 - Db connection (2nd approach) + .env (import famous issue)
+5:36:00 - cookie parser ,cors  package installed
+5:48:00 - cookie parser, cors, express setup code - End
+5:48:00 - Middle wares 
+5:53:00 - 6:03:00 - utils file created (2 methods)
+6:10:00 - 6:13:00 - Api Resonse File 
+6:17:00 - Models File Create [Schema, Fields]         (users.js)
+6:30:50 - Models File Create             (Video.model.js)
+6:36:00 - Mongoose aggregate-paginate  package 
+6:39:00 - Bcrypt.js
+6:40:00 - Bcrypt  [Hash your password]
+6:41:00 - JSON Web token
+6:42:00 - Install i bcrypt jsonwebtoken
+6:54:00 - JWT  (https://github.com/auth0/node-jsonwebtoken)
+6:55:00 - Refresh token, Access Token
+6:59:00 - Generate Access token
+7:02:30 - Generate Refresh token [same code as access token]
+7:08:00 - Middleware (Jaane se pehle mujhse mil ke jaana)
+7:10:00 - Cloudinary
+7:11:00 - express fileupload, multer
+7:12:00 - Multer
+7:14:00 - Cloudinary and multer install
+7:15:50 - 2 methods to upload file 
+7:18:00 - cloudinary (file upload util)
+7:20:00 - fs 
+7:24:00 - cloudinary (file upload util)
+7:32:00 - 1st Middleware create 
+7:34:00 - Multer documentation
+7:35:00 - 7:44:00 - Multer (Middleware)
+7:45:00 - HTTP  (Theory) 
+7:48:00 - URL,URI,URN
+7:49:20 - HTTP Headers
+7:55:00 - Most Common Headers
+7:56:00 - Cors, Security
+7:58:00 - HTTP methods (GET,HEAD,OPTIONS,TRACE,DELETE,PUT,POST,PATCH)
+8:02:45- HTTP Staus Code [13 total - Imp]
+8:11:00 - Controller (1st controller)
+8:15:00 - User Routes (1st)
+8:25:00 - 8:30:00 - problem debugg
+8:30:00 - Thunder client
+8:31:00 - PostMan
+8:36:00 - User register,geet data,server pe data lenge, and DB me save karenge
+8:40:00 - Start (// get user details from frontend , // validation - not empty,// check if user 
+                       already exists: username, email, // check for images, check for avatar,
+                       // upload them to cloudinary, avatar , // create user object - create entry in db,
+                       // remove password and refresh token field from response,// check for user creation,
+                      // return res)
+8:50:00 - (1st) get user details from frontend
+8:58:00 - (2nd) Validation
+9:03:00 - (3rd) check user exist or not
+9:07:00 - (4th)  check for images, check for avatar
+9:12:00 - (5th) upload them to cloudinary, avatar
+9:16:00 - (6th)  create user object - create entry in db
+9:23:00 - (7th) remove password and refresh token field from response
+9:24:00 -  (8th )check for user creation
+9:25:00 -9:30:00 - (9th) return res [Done]
+9:34:00 - Code testing (working or not)
+9:48:00 - Cover image not sending (testing and debug)
+9:54:00 - Summary (1st Middleware)
+9:56:00 - 10:04:00 - PostMan (collection and environments) - Imp
+==============Video 01 End======================
+
+
+================Video 02 Start =========================
+Javascript backend - Part 02:
+23 July:
+5:00- Login User (Steps) // req body -> data ,// username or email ,//find the user
+          //password check , //access and referesh token ,//send cookie
+
+9:00 - (1st) Req Body
+14:00 - (4th) password check 
+17:20 - (5th) access and referesh token
+26:00 - (6th) Send Cookies
+33:00 - Done (Logged In User)
+33:10 - Logout User
+37:00 - Auth Middleware
+52:00 - Middleware use in Routes
+55:00 - Revise 
+1:02:00 - end 
+1:03:00 - testing (logout,login)
+1:11:00 - Refresh and Access Token (discussion)
+1:13:00 - Token Refresh (Endpoint create)
+1:33:00 - Done (Refresh and Access Token)
+1:35:00 - Subscribtion Model (create)
+1:45:00 - ChangeCurrentPassword (controller)
+1:53:00 - GetCurrentUser (controller)
+1:55:00 - UpdateAccountDetails (controller)
+2:03:00 - UpdateUserAvatar (controller)
+2:09:00 - UpdateUserCoverImage (Controller) [Same code as UpdateUserAvatar]
+Professional Journay :
+2:16:00 - Theory (SD2,SD3)
+2:21:00 - 2:36:00 - Subscriber , Channel
+
+24 July :
+2:37:00 - Aggregation Pipeline (Important)
+2:51:00 - getUserChannelProfile [Channel, subscribe]
+3:06:00 - Pipeline (Summary explain till here)
+3:13:00 - 2nd Pipeline (SDE2,SDE3 level pipeline complex)
+3:14:00 - Watch History 
+3:17:00 - Code Start (getWatchHistory)
+3:32:00 - Routers [All write]
+3:42:30 - Overview (Backend)
+3:47:00 - Summary of Project strcuture
+3:58:00 - End
+
+
+In Short :
+How to deploy backend code in production   00:29:19
+Connect Backend with frontend   01:19:32
+Data Modelling for backend with mongoose  02:10:17
+E-commerce and Hospital management data modelling  03:06:27
+Taking backend to next level  03:56:16
+
+
+How to setup a professional backend project  04:06:17
+How to connect database in MERN with debugging  04:47:51
+Custom API response and error handling 05:28:43
+User and video model with hooks and JWT 06:15:38
+How to upload file in backend | Multer 07:05:38
+HTTP crash course 07:43:59
+Complete guide for router and controller 08:08:17
+Logic building - Register controller 08:37:51
+How to use postman for backend 09:30:39
+
+
