@@ -1,15 +1,27 @@
 
+// STEP : 01
+// Note: jaise (12.ApiError.jsx) file me code kiya same way ek ApiResponse ki file bhi bana lete hai.
+
 // Api error to hogya, Ab hum ApiResponse bana lete hai
 
-
+// Ab mai simple ek class banayenge, name "ApiResponse"
 class ApiResponse {
+    // STEP : 02
+    // Ab iss class me mujhe pta hai, mera constructor available h.
+    // But, yaha mai mera constructor banana chahunga.
+    // // Ye raha mera constructor
 
+    // and jab bhi app , kisi ko response bhejenge issko class ke through bhejenge.
+    // To atleast ye class jab bhi benegi, to statusCode lagega hi lagega.
+    // data bhejna hi hoga nad message bhi bhejna hi hoga
     // ye ApiResponse class jab bhi banegi, to humme
-    // statusCode, data , message to chahiye hoga humesha
+    // statusCode, data , message to bhejna hi hoga and kyuki ye ApiResponse hai (toh mostly ye "success" hi hoga.)
     constructor(statusCode, data, 
         // api response hai, to mostly success hi jaayega
         message = "Success")
-    // Now, aao ab override kare
+        
+        // STEP : 03
+    // Now, aao ab override kare, iss constructor ki chizo ko override kr dete hai.
     {
         //this.statusCode ko apne statusCode se overrride kar rahe h
         this.statusCode = statusCode
