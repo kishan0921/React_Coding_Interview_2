@@ -9,6 +9,7 @@ import { DB_NAME } from "./constants.js";
 // STEP: 02
 // Now, ab hum ek function banate hai.
 // and obviously async function hoga....kyuki db se connect krna h(db alag continent me h to wait krna hoga.)
+// Note: jab bhi async method complete hoga, then wo ek event listener dega.
 const connectDB = async () => {
   // STEP : 04
   // Db connect kar rahe to to problem aa skti hai,

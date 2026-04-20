@@ -9,7 +9,28 @@
 
 // Hum 2 tarike se database connect krna sikhenge
 
-// require('dotenv').config({path: './env'}) // Automatically loads environment variables from .env file
+// STEP: 10
+
+// In Documentation :
+// Its written : As early as possible in your application, import and
+// configure dotenv.
+// Automatically loads environment variables from .env file
+// To hum ky chahte hai, jitni zaldi humari app start ho...usski ke saath
+// utni hi zaldi, sabse pehle jitni bhi hmari .env file me jo configuration likhi h.
+// wo sab import ho jaaye. and ye index main file h. to ye run hoga 1st time.
+// to issi ke liye
+
+// Old way
+//to used : (isse mere code ka constency karab hota h)
+// require('dotenv').config()
+
+// New way
+//to used (maintain constency)
+// require ke ander file name, and config ke ander (path bata do)
+// require('dotenv').config({path: './env'})
+
+// Latest way to used like :
+// dotenv.config({ path: "./.env" });
 
 // Approach : 02
 // STEP : 10 (db/index.jsx firstly go to this file)
@@ -19,16 +40,22 @@ import { DB_NAME } from "./constants.js";
 
 import connectDB from "./db/index.js";
 import { app } from "./app.js";
+import { error } from "console";
 
+// STEP : 11
 dotenv.config({ path: "./.env" });
 
+// STEP : 12
 // Jab Db connect ho jaye
+// Note: (09 Index.js) jab bhi connectDB() async method complete hoga, then wo ek event listener dega.
 connectDB()
+  // STEP : 14
+  // Now, jaise hi mera databse connect ho jaaye
   // to then () me successful handle kr lenge
   // and catch () me error handle kr lenge
-  // Yaha Then ke ander callback mil raha hai.
+  // Yaha ".then" ke ander bhi mujhe ek callback milega.
   .then(() => {
-    // App ke ander hum listen karenge, tabhi na humara server chalega
+    // ab hum "app" ke ander hum listen karenge, tabhi na humara server chalega
     // Then kon sa port ? so we will use process.env.PORT
     app.listen(
       process.env.PORT || 8000, // Agar port nahi mila to 8000 pe chalega, jisse hum server crash hone se bacha sakte hain
@@ -39,7 +66,10 @@ connectDB()
     );
   })
 
-  .catch();
+  // STEP : 13
+  .catch((err) => {
+    console.log("MONGO db connection faild !!! ", err);
+  });
 
 // Note: 5:10:00 Ye Approach 01 accha hai, but humne thoda index.jsx code
 //zaada polluted kr liya hai. (long line of code)
