@@ -224,7 +224,7 @@ const registerUser = asyncHandler(async (req, res) => {
 })
 
 
-// STEP : 07 (5:00)
+// STEP : 07 (5:00  -- 17:30) - video 02
 // Now basic login banayenge.
 const loginUser = asyncHandler(async (req, res) => {
     // Steps: 
@@ -379,7 +379,7 @@ const loginUser = asyncHandler(async (req, res) => {
 }) 
 
 
-// TIME : 17:45
+// TIME : (17:45 -- 33:10)  - video 02
 // STEP : 07.1 (loginUser method jab banayenge,ussi me "generateAccessAndRefreshTokens" ka use hoga)
 const generateAccessAnsdRefreshTokens = async (userId) => {
     
@@ -419,7 +419,7 @@ const generateAccessAnsdRefreshTokens = async (userId) => {
 }
 
 
-// STEP : 08 (33:46 -- 1:00:00)
+// STEP : 08 (33:46 -- 1:00:00)   - video 02
 // STEP : 09 ( GO TO 21 auth.middleware.js file - complete all steps-- comback here..)
 // Chalo ab logout user bhi bana lete hai.
 // wohi basic asyncHandler use karenge, and isske ander async code likhenge, and isske and (req,res) hoga
@@ -493,7 +493,7 @@ const logoutUser = asyncHandler(async (req, res) => {
 });
 
 
-// STEP : 10 (1:14:10 -- 1:31:00)
+// STEP : 10 (1:14:10 -- 1:31:00)   - video 02
 // Ab hum 1 refreshaccesstoken ka 1 endpoint banate hai.
 // endpoint ke liye, controller hi banana hoga.
 // name de dete hai, refreshAccessToken
@@ -585,7 +585,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
 
 // STEP :11 (create 22 subscription.model.js)
 
-// STEP :12
+// STEP :12  (1:45:00 -- 1:53:00)   - video 02
 // ab hum ek aur controller banayenge, jisska use krke hum user se usska password change krwaayenge.
 const changeCurrentPassword = asyncHandler(async (req,res) => {
     // Ab password change krwaane ke liye , kitne field lene hai wo aape depend krta h.
@@ -624,7 +624,8 @@ const changeCurrentPassword = asyncHandler(async (req,res) => {
     .json(new ApiResponse(200,user,"Password changed successfully"))
 })
 
-// STEP :13
+
+// STEP :13 (1:53:00 -- 1:54:00)   - video 02
 // ab current user get krna hai humme.
 // to agar user logged in hoga to , to 2 min ussko user me find krke de skta hu.
 const getCurrentUser = asyncHandler(async (req,res) => {
@@ -633,7 +634,7 @@ const getCurrentUser = asyncHandler(async (req,res) => {
     .json(new ApiResponse(200,req.user,"User fetched successfully"))
 })
 
-// STEP :14
+// STEP :14 ( 1:54:00 -- 2:02:00)   - video 02
 // ab agar aapko aur bhi detail update krwaane h to ,
 const updateAccountDetails = asyncHandler(async (req,res) => {
     // kya krna hai, sabse pehle req.user se information leni padegi.
@@ -678,7 +679,8 @@ const updateAccountDetails = asyncHandler(async (req,res) => {
 
 })
 
-// STEP :15
+// STEP :15 ( 2:03:00 -- 2:10:00)   - video 02
+// Note: code is 98 % same (updateUserAvatar waala, here in updateUserCoverImage)
 // ab avatar user ka update krwa lenge.
 const updateUserAvatar = asyncHandler(async (req,res) => {
     // Ab hume yaha pe avatar update krna hoga.
@@ -725,7 +727,8 @@ const updateUserAvatar = asyncHandler(async (req,res) => {
     .json(new ApiResponse(200, user, "avatar Image updated successfully"))
 })
 
-// STEP :16
+// Note: code is 98 % same (updateUserAvatar waala, here in updateUserCoverImage)
+// STEP :16  (2:10:00 -- 2:12:00)   - video 02
 // Same copy paste code hai, updateUserAvatar waala and usski me kuch changes kiye h
 // Basically uppar avatar update krne waala controller banaye the, and yaaha hume
 // coverImage update krne waala controller banana h
@@ -776,10 +779,10 @@ const updateUserCoverImage = asyncHandler(async (req,res) => {
 
 
 
+// STEP : 17 (2:51:00 -- 3:14:00)   - video 02
 // hard walaa case - Aggregate Pipeline
-
 const getUserChannelProfile = asyncHandler(async(req,res)=> {
-
+    // STEP : 17.1
     // 1st - username e lete hai, req.params se
     const {username} = req.params
 
@@ -799,6 +802,7 @@ const getUserChannelProfile = asyncHandler(async(req,res)=> {
    const channel = await User.aggregate([
     // Ab aate hai step 02: aggregation pe
 
+    // STEP : 17.2
     // 1st pipeline
     {
         // match field ki pipeline h
@@ -810,6 +814,7 @@ const getUserChannelProfile = asyncHandler(async(req,res)=> {
     },
     // Now, uppar jo ek document hai usske basis pe mujhe krna hai, lookup
 
+    // STEP : 17.3
     // 2nd pipeline  - Subscriber saare mil jaayenge as document ke form me
     {
         // Note: go to Subscription model and see the example
@@ -826,6 +831,7 @@ const getUserChannelProfile = asyncHandler(async(req,res)=> {
         }
     },
 
+    // STEP : 17.4
     // 3rd pipeline - subscribed saare mil jaayenge document ke form me
         
     {
@@ -836,6 +842,7 @@ const getUserChannelProfile = asyncHandler(async(req,res)=> {
             as : "subscribedTo"
         }
     },
+    // STEP : 17.5
         // 4th pipeline - ab ek aur pipeline hota hai humare pass, addfield name se
         
         // to hum addField - operator ka use krenge.
@@ -877,6 +884,7 @@ const getUserChannelProfile = asyncHandler(async(req,res)=> {
 
         },
 
+        // STEP : 17.6
         // 5th pipeline - (project)finally return kr do 
         {
             // project kya hota h?
@@ -899,12 +907,14 @@ const getUserChannelProfile = asyncHandler(async(req,res)=> {
         // Ab yaaha console log krke dekhna , kya value aata hai.
    ])
 
+   // STEP : 17.7
    // ab agar channel me data hi nahi aaya ho to , means pipeline failed hua ho to
    if(!channel?.length){
     throw new ApiError(404, "Channel not found")
    }
 
 
+   // STEP : 17.8
    // Agar sabkuch this h to , user ko response return kr do
    return res
    .status(200)
@@ -914,9 +924,11 @@ const getUserChannelProfile = asyncHandler(async(req,res)=> {
 })
 
 
+// STEP : 18 (3:18:00 -- 3:32:00)   - video 02 
 // Next pipeline likhange, ki user ki watch history kaise get hogi
 const getUserWatchHistory = asyncHandler(async (req, res) => {
     
+    // STEP : 18.1
     // ek aur pipeline banayenge, and user me ussko return kr denge
     // hum User pe aggregate pipeline laga rahe h.
     const user = await User.aggregate([
@@ -933,6 +945,7 @@ const getUserWatchHistory = asyncHandler(async (req, res) => {
             }
         },
 
+        // STEP : 18.2
         // 2nd pipeline
         {
             // ab maine bola lookup kar lijiye
@@ -975,6 +988,7 @@ const getUserWatchHistory = asyncHandler(async (req, res) => {
                             ]
                         }
                     },
+                    // STEP : 18.3
             // ab hum thoda pipeline ka data ka strucutre thik krenge,
             // ab nahi chaho to mt krna ye step
                     {
@@ -992,6 +1006,7 @@ const getUserWatchHistory = asyncHandler(async (req, res) => {
         }
     ])
 
+    // STEP : 18.4
     // ab response to return krna hoga
     return res
     .status(200)
@@ -1005,6 +1020,8 @@ const getUserWatchHistory = asyncHandler(async (req, res) => {
 })
 
 
+// STEP : 19 
+// Full REvision of Project : 3:48:00 - 3:55:00
 
 // export karenge, basically export kr rahe as object 
 // and usske ander registerUser
