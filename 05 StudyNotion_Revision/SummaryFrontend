@@ -1,0 +1,1053 @@
+
+Note :
+Component aise import hai issme.... and bydefault copy paste karoge to "component" aayega
+apiConnector aise import hai issme.... and bydefault "apiconnector" aise aayega copy-paste pe
+
+=========================================================
+Note: Till Video 98 (Study-Notion-master-master) ke refernce liya fir problem hua contact us code nahi tha
+Then: Study-Notion-master-NewAllcode
+
+Backend File Config - 101 lec (2:02:00)
+Server (Folder structure is correct)
+npm install express cors
+
+Note: server/index.js 
+app.use(
+	cors({
+		origin: CORS_ORIGIN,  // Earlier it is "*"
+		credentials: true,
+	})
+);
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Lecture : 109 [Instructor Dashboard,InstructorChart ]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Target: Instructor Dashboard Pending Yahi krne waale h
+
+StudyNotion-main\server\controllers\
+          -- profile.js (Updating instructorDashboard code) (10:32 -- 17:10)
+        
+StudyNotion-main\src\Components\core\Dashboard\InstructorDashboard
+          -- Instructor.jsx (18:40 -- ) (39:30 -- 55:00)
+          -- InstructorChart (51:40) created
+
+StudyNotion-main\src\services\operations\
+          -- profileAPI.js (25:10 --30:30 )(updating code)
+
+App.js (updating)
+Added
+<Route path="dashboard/instructor" element={<Instructor />} />
+
+=======================================================================
+Step 02:
+StudyNotion-main\src\Components\core\Dashboard\InstructorDashboard
+          -- InstructorChart (1:01:20 --1:25:00 )
+
+Chart.js
+https://www.chartjs.org/docs/latest/samples/line/stepped.html
+
+Install this package 
+npm i chart.js 
+npm i react-chartjs-2
+
+App is running ...Sucessfully Done
+THE END :) :)
+
+
+Baat Chitt(1:25:00  -- 1:39:00)
+16 March,2025  7:06pm (Khtmm..)
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Done - 100%  March 16, 2025 (Sunday) 6:05PM
+Lecture : 108 [Bug last class, Review Slider(Homepage and other)]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Step 01:
+Target:
+(Previous page completing, and debugging last class code)
+
+StudyNotion-main\server\controllers\
+        -- courseProgress.js  (15:40 -- 25:16) (updating to solve error ri8 now facing)
+
+Last class Error fixing [2:30 -- 39:30] Solved
+New Error Solving [39:30 -- 47:30 ] Solved
+Finally lastclass Bug solved (1:03:52) Done
+
+--------------------------------------------------
+Step 02:
+1:05:00
+Now, Homepage [2/3rd class me Review waala section chode the....]
+aao wo banate hai ab
+
+https://swiperjs.com/element
+
+StudyNotion-main\src\pages\
+        -- Home.jsx  (Updating Code)
+
+Install this package
+npm install swiper
+
+StudyNotion-main\src\Components\common\
+        -- ReviewSlider.jsx (1:06:10  -- 1:42:10 Done)
+
+Profile Upload also checked 1:46:40
+
+Song-California
+https://www.youtube.com/watch?v=Ul_dAgf655U
+
+Song - Haryana Hood 
+https://www.youtube.com/watch?v=qeVUGnke9ko
+-------------------------------------------------
+Step : 03
+Error Fixing (4 errror)
+1st Problem
+StudyNotion-main\src\Components\common\ReviewSlider.jsx 
+Fix this line
+import { apiConnector } from "../../services/apiConnector"
+
+2nd problem 
+Update this line in ReviewSlider.jsx
+import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
+
+App running.. Problem solved
+
+Now, Update code for Home,AboutUs,ContactUs page (Done updating code)
+Done
+App running..... Sucessfully :)
+
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Done - 100%  March 16, 2025 (sunday) 5:20PM
+Lecture : 107  [ViewCourse[update],VideoDetailsSidebar ,CourseReviewModal,VideoDetails]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Step 01:
+StudyNotion-main\src\pages\
+        -- ViewCourse.jsx  (12:10 -- 24:00)
+
+App.js (Route update) [24:30]
+
+
+StudyNotion-main\src\Components\core\ViewCourse\
+          -- VideoDetailsSidebar.jsx (28:30 -- 1:10:00)
+          -- VideoDetails (1:11:23) (1:42:00 -- 2:39:20 till last)
+          -- CourseReviewModal.jsx  (1:19:10  -- 1:39:00 )
+
+------------------------------------------------------------------
+Step 02:        
+Installing this package (In video)
+https://www.npmjs.com/package/react-rating-stars-component
+
+npm i react-rating-stars-component
+
+Install thiss package (In video)
+https://www.npmjs.com/package/video-react
+npm i video-react
+
+Show Demo
+https://video-react.js.org/
+
+Other Component of react-video  (we can use from here)
+https://video-react.js.org/components/player/
+
+
+Already install 
+https://www.npmjs.com/package/react-icons
+
+Pending..
+    --VideoDetails.jsx (Course Progress PENDING..)
+
+Video End Here... :)
+
+Now, error in app.js
+import this line
+import { ACCOUNT_TYPE } from "./utils/constants";
+Add this line
+const { user } = useSelector((state) => state.profile)
+and Import this line also
+import { useDispatch, useSelector } from "react-redux";
+
+Done .. App Running 
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Done - 100% 15 March, 2025  3:47PM(Sunday)
+Lecture : 106 [CourseDetails(updating),CourseDetailsCard,RenderTotalAmount ]
+          Homework [Accordion section]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Step 01:
+StudyNotion-main\src\pages\
+          -- CourseDetails.jsx (4:55 -- 34:26/) (updating code)
+
+StudyNotion-main\src\Components\core\Course\
+          -- CourseDetailsCard.js (34:43 --1:18:00  till last)
+
+StudyNotion-main\src\Components\core\Dashboard\Cart\
+           -- RenderTotalAmount.jsx  (Updating)
+buyCourse(token, courses, user, navigate, dispatch) (update this line)
+
+Code Flow Checked  - 1:06:10 (Done)
+
+End Here video.... :)
+
+Error Buy Running..
+Self Install to Run App
+npm install copy-to-clipboard
+
+Error Solved ... App Running :)
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Done - 100% 16 march, 2025 3:07PM
+[imp]Lecture: 105 [Payment Theroy,Payments.js[server],CourseDetails,studentFeaturesAPI(Razorpay menu)]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Step 01:
+Payment Docs Link
+https://razorpay.com/docs/partners/aggregators/partner-auth?search-string=partneer%20auth
+
+Love Babber ssay (Read this page)
+https://razorpay.com/docs/partners/aggregators/partner-auth/payment-gateway/
+
+
+[Today Agenda]: 1:50 -- 4:20
+
+Important Note:
+===================
+StudyNotion-main\server\controllers\payments.js 
+Earlier, Code is written using webHooks.. by this we only able to buy 1 course at one time..
+But,Now and inFuture we plan to Buy Many Item at 1 go..
+So, We comment out old webhook code and rewrite to buy multiple courses in 1 Go waala code.
+and Note: We taking reference to write code from razorpay.com ->"partner-auth/payment-gateway/"
+Now.... I In our File Already Update code written here..
+
+StudyNotion-main\server\controllers\
+        -- payments.js  (8:20 -- 40:00 end)
+Revision : 39:05 
+
+-------------------------------------------------------------------------
+Step 02:
+Ab Frontend ki baat payment waala
+
+StudyNotion-main\server\routes\
+        -- Payments.js (updating route) [42:30]
+
+App.js (update)
+ <Route path="courses/:courseId" element={<CourseDetails/>} />
+
+StudyNotion-main\src\pages\
+        -- CourseDetails.jsx (45:35 -- 48:42) (1:22:00 - )
+
+StudyNotion-main\src\services\operations\
+        -- studentFeaturesAPI.js (48:52 -- 1:09:13/1:21:20)
+
+BugFixing... (1:27:50  -- 1:45:59) Sucessfully Done
+Again New Bug fixing ... (1:50:00 -- 1:58:55) Sucessfully Done
+
+Revision:2:01:30 (payment theory)
+
+End here... Video :)
+-------------------------------------------------------------------------
+Step : 03
+But Some Problem to run app
+
+Problem 01:
+Install to becoz error in CourseDetailsjsx
+npm install react-markdown
+and then
+import ReactMarkdown from "react-markdown";
+
+Problem 02, 03:
+StudyNotion-main\src\Components\core\Course\   (Self added to Run app)
+        -- CourseAccordionBar.jsx
+        -- CourseDetailsCard.js
+
+Finally End :)
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Done 100% 16 March,2025 1:34 pm
+Lecture : 104  [Category-Page(Like Pyhton),Course_Card,CourseSlider(Swipper Package),Bug Fixing]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Step 01:
+src\Components\common\
+        -- Navbar.jsx (Dropdown Hardcode updated) (updated)
+No it is showing (no Courses found)
+
+Homework 
+Server/Controller/
+        -- Category.js (Top -selling courses all category) Already done
+
+--------------------------------------------------------------
+Step 02:
+Start video 
+
+Some code changes (done by Lovebabber) - 4:08 to 9:20  (Already Added)
+
+StudyNotion-main\src\utils\
+        -- dateFormatter.js  (Already Added)
+        -- avgReview.js   (Already Added)
+
+StudyNotion-main/src/services/
+        -- formatDate.js   (Already Added)
+
+src\Components\common\
+        -- Navbar.jsx  (Updated)
+
+src\Components\common\
+        -- RatingStars.jsx  (Already Added) (Custom Component)
+  
+Summary: 5 Changes
+      -Backend - Category Top Selling Page Detail
+      -NavBar - Sublink (Api Call to show all courses)
+      -FormateDate (formatDate.jsx)
+      -avgRating (avgReview.jsx)
+      -RatingStar (RatingStars.jsx) 
+
+--------------------------------------------------------------------
+step 03 (Actual Start from here)
+Start today video 
+
+StudyNotion-main\src\pages\
+      -- Catalog.jsx  (9:48 -- 47:00)
+
+App.js (update)
+ <Route path="catalog/:catalogName" element={<Catalog/>} />
+
+StudyNotion-main\src\services\operations\
+      -- pageAndComponentData.js (13:00 - 19:30)
+
+StudyNotion-main\src\Components\core\Catalog
+      -- Course_Card.jsx  (50:30 -- 1:01:30)
+
+Bug Fixing.. ( 1:01:05 -- 1:12:10) no fixed
+
+-------------------------------------------------------------------
+Step 04:
+Swiper (package) 
+  -- Ussed hoga slider create karne ke liye
+https://swiperjs.com/demos
+import {Swiper, SwiperSlide} from "swiper/react"
+
+Install this package
+npm i swiper
+StudyNotion-main\src\Components\core\Catalog
+      -- CourseSlider.jsx  (1:15:00 - 1:28:00 )
+
+Again 2 earlier Bug Fixing... (1:30:00 - Till last 1:40:00) No fixed
+
+End Here..
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Done - 100% 16 March, 2025 11:59AM
+Lecture : 103  [Debuging] [Dashobard(Add Course) 2step & 3rdstep,MyCourse,EditCourse]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Step 01:
+Bug Fixing (Start -- 25:40) Thik ho gya
+Finally Thik at  33:20
+
+Now Start Again,
+
+src\Components\core\Dashboard\AddCourse
+        --RenderSteps.jsx (Update)
+
+src\Components\core\Dashboard\AddCourse\PublishCourse\
+        -- index.jsx (36:00 -- 1:04:30)
+
+-------------------------------------------------------------------
+
+Step 02:
+
+StudyNotion-main\src\Components\core\Dashboard\
+        -- MyCourses.jsx  (1:06:00 -- 1:11:00)
+
+src\Components\core\Dashboard\InstructorCourses\
+        -- CoursesTable.jsx (1:12:00 -- 1:35:00 )
+Note: React Super responsive table
+npm i react-super-responsive-table
+
+-----------------------------------------------------------
+
+Step 03:
+I see util me dateFormatter.js file present hai video me
+StudyNotion-main\src\utils\dateFormatter.js   (Added)
+
+
+App.js (Route Updating) (1:35:30)
+
+src\Components\core\Dashboard\AddCourse
+        --Upload.jsx  [comment all code in Lec -103 due to error]
+
+StudyNotion-main\src\services\
+      -- formatDate.js (Added to run App)
+
+Check 
+http://localhost:3000/dashboard/my-profile
+http://localhost:3000/dashboard/settings
+http://localhost:3000/dashboard/cart
+http://localhost:3000/dashboard/enrolled-courses
+http://localhost:3000/dashboard/add-course   (Ye kuch show nahi ho raha)
+http://localhost:3000/dashboard/my-courses
+
+--------------------------------------------------------------------------
+
+Step 04:
+src\Components\core\Dashboard\EditCourse\
+      -- index.js  (1:49:00 -- 1:58:00)
+
+App.js (Updating Routes)
+<Route path="dashboard/edit-course/:courseId" element={<EditCourse />} />
+
+Check 
+dashboard/edit-course/:courseId (baadme dekhenge) (abhi nahi chl raha kyuki id nahi hai)
+
+End here.. :)
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Done - 100% (March 16,2025)
+Lecture : 102   [Dashboard -CourseBuilderForm, NestedView,SubSectionModal only] (2 step waala)
+[Dashboard-Addcourse(CourseBuilderForm) (2step waala)] 
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+src\Components\core\Dashboard\AddCourse\CourseBuilder
+        --CourseBuilderForm (8:00 - 49:30 tk issme code hua)
+        --NestedView  (49:30 - 1:42:40)
+        --SubSectionModal (1:44:30 - 2:25:00) (1:32:00 Created)
+Bug Fixing (2:26:00 -- 3:14:50 till last no solved)
+
+End Here...  :)
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Note: Changing Server .env and index.js file 
+Lecture : 101  [Dashboard-AddCourse] (Both in sidebar)
+        HomeWork [Tag Input, Upload & Thumbnail waala also]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Step 01:
+Some Coded Already added-
+
+StudyNotion-main\src\slices\
+      -- viewCourseSlice.js  (Added by LoveBabber)
+
+StudyNotion-main\src\services\operations\
+      -- courseDetailsAPI.js  (Added by LoveBabber)
+
+---------------------------------------------------------------
+Step 02:Start the video 
+
+src\Components\core\Dashboard\AddCourse
+        --index.jsx  (8:00 - 13:30)
+        --RenderSteps.jsx (14:00 - 28:00)
+        --Upload.jsx  (Maybe Next video me)  [comment all code in Lec -103 due to error]
+
+src\Components\core\Dashboard\AddCourse\CourseInformation
+        -- ChipInput  (Maybe Next video me)
+        -- CourseInformationForm (33:00- 1:05:30)  (1:21:10 - 1:48:20)
+        -- RequirementsField (1:05:30 - 1:20:30) (1:50:30 - 2:01:00)
+
+StudyNotion-main\src\slices\
+        -- courseSlice.js   (Already Added in video)
+        
+src\Components\core\Dashboard\AddCourse\CourseBuilder
+        --CourseBuilderForm  (Only Created)   [Lec 102]
+        --NestedView  (Maybe Next video me)    [Lec 102]
+        --SubSectionModal  (Maybe Next video me)   [Lec 102]
+
+src\Components\core\Dashboard\AddCourse\PublishCourse
+        -- index.jsx  (Maybe Next video me)   [lec 103]
+
+End Here...
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Done - 100%  15 March, 2025
+Lecture : 100  [Navbar-Enrolled Courses,Navbar-CartCourse]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Note: install this maybe backend run hojaye
+open server in terminal then
+npm install cors
+not woroking but still something in termial solved....(ab next baad me dekhte h)
+---------------------------------------------------------------------
+Step 01:
+To Check 
+http://localhost:3000/dashboard/cart
+http://localhost:3000/dashboard/enrolled-courses
+
+Homework (code revision) [3:20 - 5:10]
+
+StudyNotion-main/src/Components/core/Dashboard/Settings (all added as in Homework)
+        --ChangeProfilePicture
+        --DeleteAccount
+        --EditProfile
+        --index.js
+        --UpdatePassword
+
+StudyNotion-main\src\services\operations\
+        -- SettingsAPI.js  (Self added, syd video me hoga becoz homework me tha ye)
+
+Go to here and See side bar working (in homework file)
+http://localhost:3000/dashboard/my-profile
+
+--------------------------------------------------------------------------
+Step 02:
+Start video
+StudyNotion-main/src/services/operations/
+      -- profileAPI.js
+
+StudyNotion-main\src\Components\core\Dashboard\
+      -- EnrolledCourses.jsx (8:00 - 23:00)
+
+App.js (Route Updating)
+  <!-- <Route path="dashboard/enrolled-courses" element={<EnrolledCourses/>} /> -->
+
+Done Enrolled Course [Till 33:00]
+---------------------------------------------------------------------------
+Step 03:
+
+StudyNotion-main\src\Components\core\Dashboard\Cart
+      --index.js  (35:10 -- 39:12)
+      --RenderCartCourses.jsx (41:10 -- 53:00)
+      --RenderTotalAmount.jsx (53:00 -- 57:30)
+
+Video End Here....
+To Run App
+StudyNotion-main\src\services\operations\
+        -- studentFeaturesAPI.js
+
+npm install react-rating-stars-component
+
+To Check 
+http://localhost:3000/dashboard/cart
+http://localhost:3000/dashboard/enrolled-courses
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Done - 100% 15 March,2025
+[Imp]Lecture : 99 [Dashboard, MyProfile, Dashbard(Sidebar),Bug(25min waste)] 
+      [HomeWork] [Dashboard->Sidebar-> Setting ka page , Logout waala popup message]
+Note: Till here Backend work in front not working..
+http://localhost:3000/dashboard/my-profile
+(access nahi kr paa rahe hoge...kyuki ye PrivateRoute ke ander hai)
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Note: Reviews from other learners  (abhi tk Home,Aboutus,Contactus) inn sbb me baad me add hoga
+
+Step 01:
+src\Components\ContactPage\
+      -ContactDetails.jsx  (Homework)
+      -ContactForm   (Homework)
+
+src\pages\
+      -Contact.jsx  (Homework)
+
+src\App.js (updated)
+          <!-- <Route
+            path="/contact"
+            element={
+              <OpenRoute>
+                <Contact/>
+              </OpenRoute>
+            }
+          /> -->
+
+Homework Done
+----------------------------------------------------
+Step 02:
+Let's Connect with Database :
+Open MongoDB Compass
+mongodb+srv://kishan0921:UPu7AjJSQSzCZTje@cluster0.ykyps.mongodb.net/StudyNotionDB
+Paste this url and it's connected..
+
+<!-- <Outlet /> -->
+Outlet - Jab mujhe pta nahi hota dashboard pe kon sa page aane waala hai to hum outlet use krenge.
+
+Note:
+slice
+  -loadingBarSlice (ye nahi ahi abhi tak video me...but yaha hai kyuki run krna tha program)
+--------------------------------------------------------
+
+Step 03:
+Note: http://localhost:3000/dashboard/my-profile
+Open this to design the dashboard without login ...becoz login and signup not working
+for me now
+
+StudyNotion-main\src\pages\
+        -- Dashboard.jsx  (13:50 - 18:00)
+
+StudyNotion-main\src\Components\core\Dashboard\
+        -- Sidebar.jsx (20:53 - 53:33) (1:01:00- ) (yaha se data lenge dashboard-links.js)
+        -- SidebarLink.jsx (32:00 - 45:30)
+
+StudyNotion-main\src\data\dashboard-links.js
+
+StudyNotion-main\src\Components\common\
+        -- ConfirmationModal.jsx (54:00 -  1:00:55)(When you logout from Dasshboard so it's asked Yes/No)
+        --IconBtn.jsx (55:15 - 59:00 )
+
+StudyNotion-main\src\Components\core\Dashboard\
+
+      -- MyProfile.jsx (1:13:00 -- )
+
+----------------------------------------------------------
+Step 04:
+App.js (Update)  - 1:22:00 (thoda asspass dekho)
+NavBar.jsx (Update) - 1:23:00
+
+StudyNotion-main\src\Components\core\Auth\
+      -- ProfileDropDown.jsx  (Update this full code)
+
+Note: - wasting time
+1:20:57 - 1:44:00  (Login,signup button not visible error)
+---------------------------------------------------------
+
+Step 05:
+Finally Bug milgya (ab kuch sikhne ko milega)
+1:45:50 - Reload pe code fatt raha
+
+console command:
+  localStorage.clear()
+  SessionStorage.clear()
+
+
+Data persist nahi kar raha...kyuki localstorage me data daala hi nahi..
+ye problem
+
+StudyNotion-main\src\slices\
+      -- profileSlice.js  (updating code) (ajise token ko localstorage me save kiya waise hi user ko bhi localstorage me add krna hoga)
+
+ <!-- <OpenRoute> -->   in App.js (concept Revise) - 1:52:00
+
+--------------------------------------------------------------------------
+Step 06:
+Finally Bug Finised...(1:53:00)
+
+<!-- <Sidebar /> -->
+Why sidebar not visible  ?(1:53:00) 
+- Add ki nahi kiya App.js me 
+
+ <!-- <OpenRoute> vs  </PrivateRoute>  --> in App.js
+<!-- <OpenRoute> -->  - Means login nahi ho tab bhi iss route pe jaa skte ho
+<!-- </PrivateRoute>  --> - Means login nahi ho to nahi jaa skte issme
+
+--------------------------------------------------------------------------
+Step 07:
+StudyNotion-main\src\Components\core\Auth\
+        -- PrivateRoute.jsx  (Created) (1:56:00 - 1:59:10)
+      
+Now,
+import { ACCOUNT_TYPE } from "../utils/constants"
+here.. due to ../utils/constants  file not present ...not able to run the app
+so,
+
+StudyNotion-main\src\utils\
+        -- constants.js  (Self added to solve error not in video)
+---------------------------------------------------------------------------
+Step 08:
+App.js (updated)
+  <Route path="*" element={<Error />} />
+        <Route
+          element={
+            <PrivateRoute>
+              <Dashboard/>
+            </PrivateRoute>
+          }
+        >
+          <Route path="dashboard/my-profile" element={
+            <MyProfile />
+          } />
+          </Route>
+
+
+SidebarLink.jsx (updating code)
+src\Components\core\Dashboard\
+      -- MyProfile.jsx (updating code) [2:13:00 - ]
+
+
+Sidebar (problem occurs)
+App.js (updating code)
+
+End Here... :)
+Perchaiyi by Mitraz
+https://www.youtube.com/watch?v=_vhE4PWjwjg
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Done - 100% 15 March
+Lecture : 98 [About page Full Create Only, ContactUsForm] Done
+              HomeWork [ContactUs]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Step 01:
+src/pages/
+  -About.jsx (start to - till last )
+
+src
+  -App.js (update)
+
+
+src\Components\core\AboutPage
+       -Quote.js   (18:00 to 21:00)
+       -ContactFormsection.jsx (1:07:00 - )
+       -LearningGrid.jsx  (37:15 to 1:07:00 tak)
+       -Stats.jsx (28:00 to 36:00tk)
+
+
+src\Components\contactUs\
+       -ContactUsForm.jsx (1:13:00  - 2:16:30)
+
+src\data\
+        - countrycode.json (this data used in ContactUsForm.jsx)
+
+npm i react-hook-form (at 1:17:24)
+
+-------------------------------------------------------------------------
+Step 02
+Note: About.jsx me 
+      <!-- --<Footer/> -->
+      <!-- {/* <RatingSlider /> */} -->
+      Baad me next video me add hoga 
+
+Note: About page done , And Inside AboutPage- ContactUsForm Created
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Done : this video 15 March,2025
+Lecture : 97 [Error,forgotpassword,Updatepassword,verifyEmail,Route Set]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+File we creating in this video 
+
+ 
+src\Components\common\
+      -Tab.jsx  (ye bhi add hua h dekhna video me ....abhi 98 video dekh raha tha to dikha)
+
+slice
+  -authSlice.jsx (added)
+    signupData: null,
+    loading: false,
+
+services/operations
+  -authAPI.js (bich bich me issme bhi code hua)
+
+Pages
+  -Error.jsx (10:00 to 17:45)
+  -Forgotpassword.jsx (18:00 to Done till 58:00)
+  -Update password.jsx (Done till 1:33:33)(Baadme "ResetPassword" ho jaayegga name)
+  -VerifyEmail.jsx  /VerifyOtp     
+
+
+App.js (Route Added)
+
+
+-----------------------------------------------
+Already creted Don't know
+
+services
+  -apis.js (update with full code)
+
+Auth (all added)
+  ProfileDropDown.jsx (Last video me)
+  LoginForm.jsx(pta nahi kb bana ye)
+  OpenRoute.jsx(pta nahi kb bana ye)
+  SignupForm.jsx(pta nahi kb bana ye)
+  Template.jsx(pta nahi kb bana ye)
+
+pages
+  -Home.js (Last video done)
+  -Login.jsx  (pta nahi kb bana ye) [class 3 H/w]
+  -Signup.jsx  (pta nahi kb bana ye) [class 3 H/w]
+
+services
+  operations
+    authAPI.js (pta nahi kb bana ye)
+-------------------------------------------------------
+
+
+
+
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Lecture : 96 [NavBar Create] revision - 1:58:30 start
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+yaha se baad me 
+[Start today March 15]
+
+Step 01:
+  -App.js  (Navbar Added)
+        <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter">
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+        </Routes>
+      </div>
+  -Components/common/Navbar.jsx (Created) (coded)
+    
+
+Step 02:
+npm i redux-toolkit
+  
+
+step 03:
+-Index.js
+const store = configureStore(
+  {
+    reducer:rootReducer,
+  }
+);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <Provider store ={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>
+);
+---------------------------------------
+
+Step 04:
+-reducer
+        -index.js
+-Slices
+       -authSlice.js
+
+
+npm i @reduxjs/toolkit
+
+npm i react-redux
+
+------------------------------
+
+Step 05:
+Slices
+  -authSlice.js
+  -cartSlice.js
+
+npm i react-hot-toast
+
+------------------------------------
+
+Step 06:
+https://react-icons.github.io/react-icons/
+import { CiShoppingCart } from "react-icons/ci";
+<CiShoppingCart />
+
+
+core/auth
+    -ProfileDropDown
+
+src/services/
+    -apiconnector.js 
+
+npm install axios 
+
+--------------------------------------------------
+
+src
+  -.env (created)
+
+Navbar.js
+import { IoIosArrowDropdownCircle } from "react-icons/io";
+<IoIosArrowDropdownCircle />
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Lecture : 95  Doubt Class [Skip]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Lecture : 94 [Homepage Section wokring]  
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Step 01:
+Note: HomePage divided into 3 section
+Black waala - Done Previous vide
+White waala
+Black waala 
+
+Src / Pages/
+	-Home.jsx  (Coding)
+
+src\components\core\HomePage
+TimelineSection.jsx
+LearningLanguageSection.jsx
+InstructorSection.jsx
+ExploreMore.jsx   (Note issme hum datafolder/homepageexplore.js file ke data import kr rahe)
+
+
+src\components\core\common
+Footer.jsx
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Lecture : 93 [Homepage Section 1 completed]  
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+==================================================
+Step 07:
+npm i react-icons
+
+Now,
+to use icons in your project 
+https://react-icons.github.io/react-icons/
+
+src\components\core\HomePage
+	HighlightText
+	Button
+	CodeBlocks
+
+Then 
+npm i react-type-animation
+
+================================================
+Step 06:
+
+Then 
+Src / Pages/
+	-Home.jsx
+
+-----------------------------------
+
+In App.js
+import "./App.css";
+import { Route,Routes } from "react-router-dom";
+import Home from './pages/Home'
+
+function App() {
+  return (
+      <div>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+        </Routes>
+      </div>
+  );
+}
+
+export default App;
+
+-----------------------------------
+Index.js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import {BrowserRouter} from "react-router-dom";
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>
+
+    
+  </React.StrictMode>
+);
+
+
+
+================================================
+Step 05: Frontend Folder Structure
+assets -  already done
+Data - Already Done
+Components 
+	-auth
+	-common
+	-course
+	-dashboard
+Hooks
+Slice
+Reducers
+Page
+Service
+
+Now, Start Building Frontend
+
+npm i react-router-dom
+
+================================
+Step 04:
+
+Tailwind Css Template for Frontend
+Then
+Server : Folder where all backend code written
+
+After Npm i 
+Node_Module : Where all 3rd party install dependencies code
+Assets : Folder Added by LoveBabber for showing pic,Video etc
+Data : Folder Added by Love Babber becoz in footer we have data to show,hme khud nhi likhna chahte issliye 
+	isse pehle se hi likha hua hai
+	Like : Footer-Links.js (footer ka), Countrycode.js etc
+
+Public Folder : Already Added by Tailwind starter Template
+
+Abb Hmm dekhe to Homepage me kahi black page hai, aur kahi white 
+to Baar baar ye colour copy,paste na krna pade figma se issliye isska config kr denge
+
+tailwind.config.js :using font and colour in website config is there
+
+
+
+=======================================================================
+Step 03:
+Install Concurrently Package to Run both frontend and Backend Simultanolusy
+
+npm i concurrently
+
+
+Add this two Script in Package.json
+
+    "server": "cd server && npm run dev",
+    "dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run server\""
+
+Like Overall This :
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run server\""
+  },
+
+=======================================================================
+
+Step 02:
+Now, Tailwind Css starter pack:
+
+https://github1s.com/thepranaygupta/react-tailwind-css-starter-pack/blob/main/src/index.js#L1-L12
+
+Public
+	-Index.html
+then 
+app.css
+app.js
+index.js
+index.css
+
+copy paste inn sb file me 
+===================================================
+Step 01
+Fontend File (But we build frontend ) 
+Yaha se Backend file only lenge and .env file detail fill krke backend and frontend tailwind css 
+run karenge
+https://github.com/uday778/StudyNotion
+
+cd StudyNotion
+npm install
+
+npm run start

@@ -1,0 +1,16 @@
+/* write your css here */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ /* Humne aapko kya sikhaya tha ki aapki jo bhi 
+ html hai, body hai 
+ Inke ander humne kya sikha hai, generally jo isske ander overflow hai 
+ hai h ussko hum hata dete hai.*/
+html, body{
+    overflow-x: hidden;
+}
+
+
