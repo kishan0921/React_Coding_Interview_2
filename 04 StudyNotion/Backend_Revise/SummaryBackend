@@ -1,0 +1,170 @@
+Note: read From Downside 
+Note: This Include ProjectFlow File Dexcription Also in Steps
+
+Step 05:
+Video no : 92 Mega Backend Class 7
+Step 05:s
+Index.js  (Jitne bhi routes hai sbb listed kr hoga)
+
+
+======================================================================================
+Step 04:
+Video no :91 Mega Backend Class 6
+
+Controller
+    -course.js (getCourseDetail Function code write)
+    -RatingAndreview.js (from scratch)
+    -Category (CategoryPageDetails Handler Function code write)
+
+This video Ends Here 
+======================================================================================
+Step 03:
+RazorPay Integration
+
+mail\templates (provided by Love babber) its just a template 
+
+mail\template
+    -courseEnrollmentEmail.js
+    -emailVerificationTemplate.js
+    -passwordUpdate.js
+    -paymentSuccess.js
+
+To understand this watch video Backend Class -5 (but its faltu...just template provide by LoveBabber and we add this here)
+
+Note: Verfity till here what Files Created  (Backend Class 5- 35:50 )
+
+
+npm i razorpay
+
+Now,
+Controller Folder
+    -Payment.js   (code from start to end video)
+
+config Folder
+    -razorpay.js
+
+utils
+    -mailSender.js   (Automatically added by Love Babber in this video)
+
+This video End Here
+
+======================================================================================
+Step 02:
+Video no :89 Mega Backend Class 4
+
+Controller
+    -Section.js
+    -Subsection.js
+    -Profile.js
+This Video end here
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Video no :88 Mega Backend Class 3
+Controller
+    -Tags.js (Baad me name change hoga)  (Change Hokar Category.js)
+
+npm i cloudinary
+
+utils
+    -imageUploader.js
+
+Controller
+    -Course.js
+
+This Video end Here
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxsxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Video no :87 Mega Backend Class 2
+
+Controller 
+    -  Auth.js   (00:00 min to 1:13:00 min)
+
+MiddleWares
+    -auth.js  (1:24:00) End
+
+Controller
+    -resetPassword.js
+End This Video
+
+======================================================================================
+Step 01:
+Video no :86 Mega Backend Class 1
+Porject Stepup then:
+
+Config 
+    database.js
+
+Model
+    User.js  (All Code)
+    Profile.js (All code)
+    courseProgress.js (All code)
+    SubSection.js (All code)
+    Section.js (All code)
+    Course.js
+    RatingAndReview.js
+    tags.js  (baad me name change hoga)
+    OTP.js 
+
+Total 9 Done 
+
+Then :
+    Util Folder 
+        -mailSender.js
+
+============================================================================================
+Step: 00
+Copy Server Folder and Paste here 
+Then
+
+Npm I express  
+Npm I nodemon  
+
+in package.json
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+
+Then Run these Commands
+npm i 
+
+In terminal :
+	Npm I dotenv   (for .env file )
+	Npm I mongoose   (for databse connection)
+	Npm I cookie-parser  (for authentication parsing- login/sign)
+	Npm I jsonwebtoken
+	Npm I nodemailer    (sending mails)
+	Npm I otp-generator   (for opt generating)
+    Npm I bcrypt (for hashing password)
+==================================================================
+
+
+
+Step 00:
+Donwload React Start
+https://github.com/thepranaygupta/react-tailwind-css-starter-pack
+Then move Server Folder in this Folder StudyNotion
+Then 
+
+npm i
+Then
+npm start
+
+Install Concurrently Package to Run both frontend and Backend Simultanolusy
+
+npm i concurrently
+
+
+Add this two Script in Package.json
+
+    "server": "cd server && npm run dev",
+    "dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run server\""
+
+Like Overall This :
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run server\""
+  },
