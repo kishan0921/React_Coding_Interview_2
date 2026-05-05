@@ -1,0 +1,52 @@
+
+
+// STEP:01
+// Model,schema chahiye koi bhi model baane ke liye
+
+// Model create krne ke liye humme ky ky chiz chahiye ?
+// mongoose ka use krenge, schema banayenge.
+// and ek model ko create krne ke liye humme, 2 chize chahiyee...
+// 01-model ka name , 
+// 02-schema
+
+
+// STEP :02
+// Mongoose ka instance chahiye hoga (mongoose import kara liya)
+const mongoose = require("mongoose");
+
+
+// moongoose ka schema baanayenge
+const profileSchema = new mongoose.Schema({
+    // user ka gener mujhe chhaiye
+    gender:{
+        type:String,
+    },
+    // DOB mujhe chhaiye user ka
+    dateOfBirth:{
+        type:String,
+    },
+    // About acchiye mujhe user ka
+    about:{
+        type:String,
+        trim:true,
+    },
+    // contact number mujhe chhaiye user ka.
+    contactNumber:{
+        type:Number,
+        trim:true,
+    },
+
+});
+
+
+// STEP : 03
+// export krna pending hai..chalo krte hai
+// model ka name use hai
+
+// model ke ander 2 chize hum pass krte hai.
+// 1st - Model ka name
+// 2nd - User schema add kr do.
+module.exports = mongoose.model("Profile",profileSchema);
+
+
+// Profile Schema bhi ready ho gaya

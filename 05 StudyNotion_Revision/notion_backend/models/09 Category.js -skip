@@ -1,3 +1,7 @@
+
+// Note: In video earlier this file name is tagSchema.js file.
+// but, later we changed this file to "Category.js"
+
 const mongoose = require("mongoose");
 
 // Define the Tags schema

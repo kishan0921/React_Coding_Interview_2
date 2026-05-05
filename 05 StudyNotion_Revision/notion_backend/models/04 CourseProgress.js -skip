@@ -1,0 +1,40 @@
+// STEP:01
+// Model,schema chahiye koi bhi model baane ke liye
+
+// Model create krne ke liye humme ky ky chiz chahiye ?
+// mongoose ka use krenge, schema banayenge.
+// and ek model ko create krne ke liye humme, 2 chize chahiyee...
+// 01-model ka name , 
+// 02-schema
+
+
+// Note: ref - "Course", "SubSection"
+
+// STEP :02
+// Mongoose ka instance chahiye hoga (mongoose import kara liya)
+const mongoose = require("mongoose");
+
+const courseProgressSchema = new mongoose.Schema({
+    // course ki id hoti hai.
+    courseID:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Course",
+    },          
+    //apne ek completed videos krke key daali thi.
+    //and ye ek array thi.
+    // and video ka mtlb humne Subsection baataya tha..... to ref kr daal do
+    completedVideos: [
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"SubSection",
+        },
+    ]
+})
+
+
+
+// model ke ander 2 chize hum pass krte hai.
+// 1st - Model ka name
+// 2nd - User schema add kr do.
+module.exports = mongoose.model("CourseProgress",courseProgressSchema);
+
